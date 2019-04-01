@@ -10,3 +10,5 @@ review_classifier/__pycache__/
 review_classifier/preprocess_scripts/__pycache__/
 
 review_classifier/naive_bayes/__pycache__/
+
+debug/
