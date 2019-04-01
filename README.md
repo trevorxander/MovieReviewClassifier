@@ -5,18 +5,23 @@ Bigram Naive Bayes model trained on IMDB movie review data. Given a movie review
 1 . Clone repo.
 
 ```
+git clone https://github.com/trevorxander/MovieReviewClassifier.git
+```
+<br>
+2 . Install dependencies
+
+```
+pip3 install --user MovieReviewClassifier
+```
+<br>
+3 . Navigate to project root.
+
+```
 cd MovieReviewClassifier
 ```
 <br>
 
-2 . Navigate to project root.
-
-```
-cd MovieReviewClassifier
-```
-<br>
-
-3 . Run tests to retrain and evaluate models.
+4 . Run tests to retrain and evaluate models.
 ```
 python3 tests/train_movie_bigram.py
 python3 tests/train_movie_bow.py
