@@ -1,0 +1,1 @@
+from review_classifier import naive_bayes
