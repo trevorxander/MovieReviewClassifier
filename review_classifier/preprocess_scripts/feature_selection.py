@@ -1,12 +1,5 @@
 def ngrams(text, n):
-    ngrams = ''
-    iter_count = 1
-    for word in text.split():
-        ngrams += word
-
-        if iter_count % n == 0:
-            ngrams += ' '
-        else:
-            ngrams += '_'
-        iter_count += 1
-    return ngrams
+    tokens = [token for token in text.split(" ") if token != ""]
+    ngrams = zip(*[tokens[i:] for i in range(n)])
+    ngram_setntence = ' '.join([('_'.join(ngram)) + ' ' for ngram in ngrams])
+    return ngram_setntence
