@@ -1,4 +1,5 @@
 from review_classifier import naive_bayes
+from review_classifier.preprocess_scripts import preprocess
 
 MODEL_FILE = 'trained_model/movie-review-bigram.NB'
 NGRAM = 2
@@ -27,8 +28,13 @@ def eval():
     return error
 
 
+
 if __name__ == '__main__':
     print('ngram = {ngram}, smoothing={smoothing}'.format(ngram=NGRAM, smoothing=SMOOTHING))
     trained_model = train()
+    nb = naive_bayes.Model()
+    nb.load_model(MODEL_FILE)
+
     error = eval() * 100
     print("Error: {error}%".format(error=error))
+
